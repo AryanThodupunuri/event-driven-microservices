@@ -1,4 +1,5 @@
 # 📬 RabbitMQ Event Publisher (Producer)
+Aryan Thodupunuri
 
 This micro-producer module handles publishing JSON-encoded messages to a RabbitMQ queue. It's used in an event-driven microservices architecture to send events (e.g. `product_liked`) to other services like `admin-service`.
 
