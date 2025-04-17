@@ -37,7 +37,6 @@ When the `publish(method, body)` function is called:
 
 In another Python service (like Flask):
 
-```python
 from producer import publish
 
 @app.route('/api/products/<int:id>/like', methods=['POST'])
@@ -56,7 +55,7 @@ rabbitmq_host = 'rabbitmq'
 rabbitmq_port = 5672
 rabbitmq_user = 'guest'
 rabbitmq_password = 'guest'
-📦 RabbitMQ Queue
+RabbitMQ Queue
 Queue name: admin
 
 Exchange: (default, '')
@@ -65,17 +64,18 @@ Routing Key: admin
 
 Message Properties: The method name is passed as BasicProperties
 
-📦 Requirements
+# Requirements
 Install dependencies:
 pip install pika
 
-🧪 To Test
+# To Test
 Make sure RabbitMQ is running (via Docker or locally):
 
 docker run -d --hostname rabbitmq --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 Then run a test script that imports publish().
 
-🔄 Integration Suggestion
+Integration Suggestion
+
 This module works best when:
 
 Used in microservices that trigger events
@@ -84,5 +84,5 @@ Paired with a RabbitMQ consumer (like the Admin service or an analytics processo
 
 Deployed in a Dockerized system (as part of docker-compose.yml)
 
-📎 License
-MIT — use it, build on it, modify it. Attribution appreciated 🙌
+# 📎 License
+MIT
